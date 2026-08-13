@@ -1,9 +1,6 @@
 from django.urls import path
-
-from .views import AccountListCreateView
+from .views import AccountListCreate
 
 urlpatterns = [
-	path('accounts/', AccountListCreateView.as_view())
+	path('accounts/', AccountListCreate.as_view())
 ]
-# pip install psycopg
-# pip install psycopg-binary

@@ -51,11 +51,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-# pip install psycopg
+# pip install psycopg2
 DATABASES = {
 	'default': {
-		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': BASE_DIR / 'db.sqlite3',
+		'ENGINE': 'django.db.backends.postgresql',
+		'NAME': 'alpha_centauri2',
+		'USER': 'postgres',
+		'PASSWORD': 'postgres',
+		'HOST': 'localhost',
+		'PORT': '5432'
 	}
 }
 

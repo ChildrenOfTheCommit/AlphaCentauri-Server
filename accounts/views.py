@@ -17,6 +17,6 @@ class AccountListCreate(APIView):
 			serializer.save()
 			return Response(serializer.data)
 		return Response(
-			data={'message': 'Invalid :P'},
+			data=serializer.errors,
 			status=status.HTTP_400_BAD_REQUEST
 		)

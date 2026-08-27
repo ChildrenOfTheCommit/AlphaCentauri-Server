@@ -18,8 +18,8 @@ INSTALLED_APPS = [
 	'rest_framework',
 	'accounts',
 	'roles',
-	# 'planets',
-	# 'planet_classes'
+	'planets',
+	'planet_classes'
 ]
 
 MIDDLEWARE = [

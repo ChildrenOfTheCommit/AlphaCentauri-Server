@@ -3,3 +3,5 @@
 *.sqlite3
 *.env
 
+# Egnoree ol migrations/0** initial.py :)
+**/**/**0**.py

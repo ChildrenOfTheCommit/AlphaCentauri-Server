@@ -1,144 +1,68 @@
-# 🚀 Alpha Centauri
+# 🚀 Alpha Centauri – Server
 
-### Interstellar Exploration Management System
-
-## Story
-
-**Year 2247**
-
-Humanity has begun exploring distant star systems beyond Earth. The **Interstellar Exploration Agency (IEA)** has developed **Alpha Centauri**, a centralized platform used by explorers to record newly discovered planets across the galaxy.
-
-Registered Explorers can submit discoveries, while Commanders oversee the database and ensure the accuracy of all recorded information.
+[![Django](https://img.shields.io/badge/Django-6.1-092e20?logo=django)](https://www.djangoproject.com/)
+[![DRF](https://img.shields.io/badge/DRF-3.18.0-a30000?logo=django)](https://www.django-rest-framework.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169e1?logo=postgresql)](https://www.postgresql.org/)
+[![JWT](https://img.shields.io/badge/JWT-2.13.0-000000?logo=jsonwebtokens)](https://jwt.io/)
+[![Python](https://img.shields.io/badge/Python-3.12-3776ab?logo=python)](https://www.python.org/)
 
 ---
 
-# Roles
+## 🚀 About
 
-## Commander
+**Alpha Centauri** is a centralized platform for the Interstellar Exploration Agency (IEA) — a system where explorers can record newly discovered planets across the galaxy.
 
-* Manage Explorers
-* Manage Planet Classifications
-* View all discoveries
-* Edit/Delete any discovery
-* Dashboard statistics
-
-## Explorer
-
-* Register
-* Login
-* Manage Profile
-* Submit Planet Discoveries
-* Edit/Delete their own discoveries
-* Browse the Explorer Directory
+This repository contains the **backend API server** built with Django and Django REST Framework. It handles authentication, data management, and business logic for the entire platform.
 
 ---
 
-# Core Modules
+## ✨ Core Features
 
-## 1. Authentication
-
-* Register
-* Login
-* JWT Authentication
-
----
-
-## 2. Explorer Directory
-
-View all registered explorers.
-
-Fields
-
-* Codename
-* Name
-* Avatar
-* Join Date
+- **Authentication** – Register, login, and JWT-based session management
+- **Explorer Directory** – Manage and browse registered explorers
+- **Planet Discoveries** – Full CRUD operations for planet records
+- **Planet Classes** – Commanders can manage classifications
+- **Dashboard** – Provides statistics and recent activity data
 
 ---
 
-## 3. Planet Discoveries ⭐
+## 🛠️ Tech Stack
 
-This is the heart of the project.
-
-Each discovery contains:
-
-* Planet Name
-* Planet Class
-* Galaxy
-* Star System
-* Description
-* Discovery Date
-* Cover Image
-* Discovered By
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Django** | 6.1 | Backend framework |
+| **Django REST Framework** | 3.18.0 | API development |
+| **djangorestframework-simplejwt** | 5.5.1 | JWT authentication |
+| **PostgreSQL** | 16 | Production database |
+| **PyJWT** | 2.13.0 | JWT encoding/decoding |
+| **psycopg** | 3.3.4 | PostgreSQL adapter |
 
 ---
 
-## 4. Planet Classes
+## 🏁 Quick Start
 
-Commander manages classifications.
+```bash
+# Clone the repository
+git clone https://github.com/ChildrenOfTheCommit/AlphaCentauri-Server.git
+cd AlphaCentauri-Server
 
-Examples
+# Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-* Terrestrial
-* Gas Giant
-* Ice Planet
-* Ocean World
-* Desert Planet
-* Lava Planet
-* Artificial World
+# Install dependencies
+pip install -r requirements.txt
 
----
+# Run migrations
+python manage.py migrate
 
-## 5. Dashboard
-
-Show
-
-* Explorers
-* Planet Discoveries
-* Planet Classes
-* Recent Discoveries
-
----
-
-# Database
-
-Only four main tables.
-
-```text
-roles
-
-users
-
-planet_classes
-
-planet_discoveries
+# Start the development server
+python manage.py runserver
 ```
 
-Simple.
-
-Easy to understand.
-
-Easy to normalize.
+The API will be available at `http://localhost:8000`.
 
 ---
 
-# Technologies
+**GitHub:** [ChildrenOfTheCommit/AlphaCentauri-Server](https://github.com/ChildrenOfTheCommit/AlphaCentauri-Server)
 
-Frontend
-
-* Vue 3
-* TypeScript
-* Tailwind CSS
-* Pinia
-* Vue Router
-* Axios
-
-Backend
-
-* Django
-* Django REST Framework
-* JWT
-
-Database
-
-* PostgreSQL
